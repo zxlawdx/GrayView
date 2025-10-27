@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".AboutFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/aboutTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sobre o GrayView"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@color/lavender"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/aboutDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="O GrayView é um aplicativo desenvolvido para processamento e edição de imagens em tons de cinza. Você pode aplicar filtros, ajustar contraste, brilho, e muito mais.\n\nEste projeto faz parte da disciplina de Processamento de Imagens da UNIR, desenvolvido por estudantes do Bacharelado em Ciência da Computação."
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/aboutAuthor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Professor: Lucas Marques da Cunha\nAluno: Marinaldo Da Costa Barroso Filho\nCurso: Ciência da Computação - UNIR"
+            android:textSize="16sp"
+            android:textColor="@android:color/darker_gray"
+            android:lineSpacingExtra="2dp"
+            android:layout_marginBottom="16dp"/>
+
+        <ImageView
+            android:id="@+id/aboutImage"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/layout"
+            android:contentDescription="Logo do GrayView"
+            android:scaleType="centerCrop"/>
+
+    </LinearLayout>
+</ScrollView>
