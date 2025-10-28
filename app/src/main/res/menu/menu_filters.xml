@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Grupo de filtros com checkboxes -->
+    <group
+        android:id="@+id/group_filters"
+        android:checkableBehavior="all">
+
+        <item
+            android:id="@+id/filter_gray"
+            android:title="Tons de Cinza"
+            android:checkable="true" />
+
+        <item
+            android:id="@+id/filter_negative"
+            android:title="Negativo"
+            android:checkable="true" />
+
+        <item
+            android:id="@+id/filter_blur"
+            android:title="Desfocar"
+            android:checkable="true" />
+
+        <item
+            android:id="@+id/filter_test_stretch"
+            android:title="Expansão de Contraste"
+            android:checkable="true" />
+
+        <item
+            android:id="@+id/filter_bordas"
+            android:title="Filtro de Bordas"
+            android:checkable="true" />
+
+
+    </group>
+
+
+
+</menu>

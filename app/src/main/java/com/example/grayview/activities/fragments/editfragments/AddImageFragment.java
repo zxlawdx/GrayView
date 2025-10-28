@@ -57,4 +57,7 @@ public class AddImageFragment extends Fragment {
             }
         }
     }
+
+
+
 }

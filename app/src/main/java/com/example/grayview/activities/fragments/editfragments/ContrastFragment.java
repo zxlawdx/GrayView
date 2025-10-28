@@ -1,11 +1,14 @@
 package com.example.grayview.activities.fragments.editfragments;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.SeekBar;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -16,20 +19,10 @@ import com.example.grayview.activities.fragments.EditImageFragment;
 
 public class ContrastFragment extends Fragment {
 
-    private static final String ARG_BITMAP = "bitmap_arg";
-    private Bitmap originalBitmap;
     private SeekBar seekBar;
+    private TextView valueText;
     private EditImageFragment parentFragment;
-
-
-    public static ContrastFragment newInstance(Bitmap bitmap) {
-        ContrastFragment fragment = new ContrastFragment();
-        Bundle args = new Bundle();
-        args.putParcelable(ARG_BITMAP, bitmap); // <-- aqui
-        fragment.setArguments(args);
-        return fragment;
-    }
-
+    private int progress = 100; // valor padrão (100%)
 
     @Nullable
     @Override
@@ -38,15 +31,25 @@ public class ContrastFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_contrast, container, false);
 
         seekBar = root.findViewById(R.id.seek_contrast);
+        valueText = root.findViewById(R.id.value_contrast);
         parentFragment = (EditImageFragment) getParentFragment();
+
+        // Inicializa com 100%
+        seekBar.setProgress(progress);
+        valueText.setText(progress + "%");
 
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
-            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                float contrastValue = progress / 100f; // 100 = normal, 50 = reduzido, 150 = mais forte
+            public void onProgressChanged(SeekBar seekBar, int progressValue, boolean fromUser) {
+                progress = progressValue;
+                valueText.setText(progress + "%");
+
+                float contrastValue = progress / 100f; // 100 = normal
                 if (parentFragment != null) {
                     parentFragment.setContrast(contrastValue);
                 }
+
+                // 🔹 Mantém apenas em memória, não salva
             }
 
             @Override public void onStartTrackingTouch(SeekBar seekBar) {}
@@ -54,5 +57,10 @@ public class ContrastFragment extends Fragment {
         });
 
         return root;
+    }
+
+    /** Retorna o valor atual do contraste enquanto o app está aberto */
+    public int getCurrentProgress() {
+        return progress;
     }
 }

@@ -2,14 +2,16 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/edit_cortar"
-        android:title="Cortar" />
+        android:id="@+id/translate"
+        android:title="Translação"
+        />
     <item
         android:id="@+id/edit_negativo"
-        android:title="Negativo" />
+        android:title="Filtros"
+        />
     <item
         android:id="@+id/add_image"
-        android:title="Adicionar Imagem"
+        android:title="Adicionar"
         android:icon="@drawable/add_image"
         />
     <item

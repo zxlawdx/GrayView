@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_dark"
     android:padding="16dp"
     tools:context=".AboutFragment">
 
@@ -11,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:background="@color/background_dark"
         android:gravity="center_horizontal">
 
         <TextView
@@ -20,16 +22,20 @@
             android:text="Sobre o GrayView"
             android:textSize="28sp"
             android:textStyle="bold"
-            android:textColor="@color/lavender"
+            android:textColor="@color/button_background"
             android:layout_marginBottom="16dp"/>
 
         <TextView
             android:id="@+id/aboutDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="O GrayView é um aplicativo desenvolvido para processamento e edição de imagens em tons de cinza. Você pode aplicar filtros, ajustar contraste, brilho, e muito mais.\n\nEste projeto faz parte da disciplina de Processamento de Imagens da UNIR, desenvolvido por estudantes do Bacharelado em Ciência da Computação."
+            android:text="O GrayView é um aplicativo desenvolvido para
+            processamento e edição de imagens em tons de cinza.
+            Você pode aplicar filtros, ajustar contraste, brilho, e muito mais.
+            \n\nEste projeto faz parte da disciplina de Processamento de Imagens e Programação para dispositivos móveis,
+            desenvolvido por um estudante do Bacharelado em Ciência da Computação."
             android:textSize="16sp"
-            android:textColor="@android:color/black"
+            android:textColor="@android:color/white"
             android:lineSpacingExtra="4dp"
             android:layout_marginBottom="16dp"/>
 
@@ -47,8 +53,8 @@
             android:id="@+id/aboutImage"
             android:layout_width="200dp"
             android:layout_height="200dp"
-            android:src="@drawable/layout"
             android:contentDescription="Logo do GrayView"
+            android:src="@drawable/logo"
             android:scaleType="centerCrop"/>
 
     </LinearLayout>

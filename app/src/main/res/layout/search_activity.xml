@@ -6,6 +6,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#161022"
     android:padding="16dp"
     tools:context=".activities.fragments.SearchFragment">
 
@@ -32,8 +33,8 @@
             android:hint="Pesquise"
             android:paddingStart="16dp"
             android:paddingEnd="16dp"
-            android:textColor="@color/text_primary"
-            android:textColorHint="@color/text_hint" />
+            android:textColor="#f6f6f8"
+            android:textColorHint="#b0b0b5" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <!-- Ícone de busca (ImageButton) arredondado -->
@@ -43,13 +44,15 @@
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginStart="8dp"
+        android:backgroundTint="#8455f1"
         android:background="@drawable/rounded_button_background"
         android:contentDescription="Buscar"
         android:padding="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/search_bar"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_search" />
+        app:srcCompat="@android:drawable/ic_menu_search"
+        app:tint="#f6f6f8" />
 
     <!-- Lista de resultados -->
     <ScrollView

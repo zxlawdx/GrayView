@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="text_primary">#000000</color>
-    <color name="text_hint">#A9A9A9</color>
-    <color name="recycler_background">#1F2552</color>
-    <color name="button_background">#4CAF50</color>
-    <color name="button_text">#FFFFFF</color>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
-    <color name="lavender">#8692f7</color>
+    <!-- Paleta principal (modo escuro) -->
+    <color name="primary">#8455f1</color>
+    <color name="background_dark">#161022</color>
+    <color name="surface_dark">#1c152b</color>
+    <color name="surface_variant">#2a1f3f</color>
+    <color name="text_primary">#f6f6f8</color>
+    <color name="text_hint">#aaaaaa</color>
+
+    <!-- Cores genéricas do Android Studio -->
+    <color name="lavender">#E6E6FA</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="teal_200">#03DAC5</color>
+    <color name="teal_700">#018786</color>
+
+    <!-- Botões -->
+    <color name="button_background">#8455f1</color>
+    <color name="button_text">#f6f6f8</color>
 </resources>

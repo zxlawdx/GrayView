@@ -6,49 +6,43 @@
     android:id="@+id/edit_fragment_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#161022"
     tools:context=".activities.fragments.EditImageFragment">
-
-    <!-- Imagem principal -->
-
-    <!-- Container para fragmentos de edição (brilho, contraste, etc.) -->
-
-    <!-- Barra inferior de edição -->
 
     <ImageView
         android:id="@+id/edit_image"
-        android:layout_width="298dp"
-        android:layout_height="503dp"
-        android:contentDescription="Image to edit"
+        android:layout_width="340dp"
+        android:layout_height="425dp"
+        android:layout_margin="8dp"
+        android:adjustViewBounds="true"
+        android:background="#2A223A"
+        android:clipToOutline="true"
+        android:padding="4dp"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toTopOf="@+id/fragment_edit_controls"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.782"
-        tools:srcCompat="@drawable/layout" />
-
-    <FrameLayout
-        android:id="@+id/fragment_edit_controls"
-        android:layout_width="13dp"
-        android:layout_height="3dp"
-        android:layout_marginBottom="32dp"
         app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.957" />
+        tools:ignore="ContentDescription" />
+
+    <FrameLayout
+        android:id="@+id/fragment_edit_controls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="0dp"
+        app:itemTextColor="@color/background_dark"
         android:layout_height="wrap_content"
-        android:background="?android:attr/windowBackground"
-        app:menu="@menu/edit_menu"
-        app:itemIconTint="@color/black"
-        app:itemTextColor="@color/black"
+        android:background="@color/cardview_light_background"
         app:labelVisibilityMode="labeled"
+        app:menu="@menu/edit_menu"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

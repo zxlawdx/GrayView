@@ -2,42 +2,46 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="100dp"
-    android:background="#f9f9f9"
-    android:orientation="horizontal"
+    android:layout_height="wrap_content"
+    android:background="#161022"
+    android:orientation="vertical"
     android:padding="16dp"
     tools:context=".activities.fragments.editfragments.ContrastFragment">
 
-
-    <!-- Título -->
     <TextView
         android:id="@+id/title_contrast"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:paddingBottom="8dp"
         android:text="Contraste"
-        android:textColor="#333333"
+        android:textColor="#F6F6F8"
         android:textSize="18sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="8dp" />
 
-    <!-- Barra deslizante -->
-    <SeekBar
-        android:id="@+id/seek_contrast"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:max="200"
-        android:progress="100" />
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
 
-    <!-- Valor numérico -->
-    <TextView
-        android:id="@+id/value_contrast"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:paddingTop="8dp"
-        android:text="100%"
-        android:textColor="#555"
-        android:textSize="16sp" />
+        <SeekBar
+            android:id="@+id/seek_contrast"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:max="200"
+            android:progress="100"
+            android:progressTint="#8455F1"
+            android:thumbTint="#8455F1" />
 
+        <TextView
+            android:id="@+id/value_contrast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="12dp"
+            android:text="100%"
+            android:textColor="#B9B3C8"
+            android:textSize="16sp" />
+    </LinearLayout>
 </LinearLayout>
